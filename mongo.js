@@ -24,11 +24,7 @@ const note = new Note({
     date: new Date(),
     important: true,
 })
-/*
-note.save().then(result => {
-    console.log('note saved')
-    mongoose.connection.close()
-})*/
+
 
 Note.find({}).then(res => {
     res.forEach(note => {

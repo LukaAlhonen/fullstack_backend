@@ -13,6 +13,7 @@ mongoose.connect(url)
     })
 
 const noteSchema = new mongoose.Schema({
+<<<<<<< HEAD
   content: {
     type: String,
     minlength: 5,
@@ -23,6 +24,18 @@ const noteSchema = new mongoose.Schema({
     required: true
   },
   important: Boolean,
+=======
+    content: {
+      type: String,
+      minlength: 5,
+      required: true
+    },
+    date: {
+      type: Date,
+      required: true
+    },
+    important: Boolean
+>>>>>>> 1c453590dbe3667fbc496eefe616b025c866ccc7
 })
 
 noteSchema.set('toJSON', {
