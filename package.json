@@ -9,7 +9,8 @@
     "build:ui": "rm -rf build && cd /home/luka/Projects/fullstack_frontend/test && npm run build && cp -r build /home/luka/Projects/fullstack_backend",
     "deploy": "git push heroku main",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push && npm run deploy",
-    "logs:prod": "heroku logs --tail"
+    "logs:prod": "heroku logs --tail",
+    "lint": "eslint ."
   },
   "author": "Luka Alhonen",
   "license": "ISC",
@@ -17,10 +18,12 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
+    "http": "^0.0.1-security",
     "mongoose": "^6.2.9",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "eslint": "^8.14.0",
     "nodemon": "^2.0.15"
   },
   "repository": {
